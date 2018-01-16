@@ -21,6 +21,7 @@
 #endregion
 
 using System;
+using Gigya.Common.Contracts.HttpService;
 
 namespace Gigya.Microdot.ServiceDiscovery.Config
 {
@@ -87,7 +88,7 @@ namespace Gigya.Microdot.ServiceDiscovery.Config
 
         public CachingPolicyConfig CachingPolicy { get; set; }
 
-        public TimeSpan? SuppressHealthCheckAfterServiceUnused { get; set; }
+        public TimeSpan SuppressHealthCheckAfterServiceUnused { get; set; } = TimeSpan.FromMinutes(15);
 
         public override bool Equals(object obj)
         {
