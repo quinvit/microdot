@@ -28,7 +28,6 @@ using System.Reflection;
 using Gigya.Common.Contracts.HttpService;
 using Gigya.Microdot.Fakes.Discovery;
 using Gigya.Microdot.Interfaces.Logging;
-using Gigya.Microdot.Orleans.Hosting;
 using Gigya.Microdot.ServiceDiscovery;
 using Gigya.Microdot.ServiceDiscovery.Rewrite;
 using Gigya.Microdot.ServiceProxy;
@@ -126,10 +125,8 @@ namespace Gigya.Microdot.Testing.Shared.Service
 
             var serviceArguments = new ServiceArguments(ServiceStartupMode.CommandLineNonInteractive, siloClusterMode: siloClusterMode, shutdownWaitTimeSec: shutdownWaitTime);
             var commonConfig = new BaseCommonConfig();
-            var mapper = new OrleansServiceInterfaceMapper(new AssemblyProvider(new ApplicationDirectoryProvider(commonConfig), commonConfig));
-            var basePort = mapper.ServiceInterfaceTypes.First().GetCustomAttribute<HttpServiceAttribute>().BasePort;
 
-            return new ServiceArguments(ServiceStartupMode.CommandLineNonInteractive, basePortOverride: basePort, shutdownWaitTimeSec: shutdownWaitTime);
+            return new ServiceArguments(ServiceStartupMode.CommandLineNonInteractive, shutdownWaitTimeSec: shutdownWaitTime);
         }
 
         public abstract void Dispose();

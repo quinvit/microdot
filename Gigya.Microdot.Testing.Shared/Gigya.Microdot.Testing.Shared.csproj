@@ -97,14 +97,6 @@
       <Project>{63e40f38-df99-4df5-9b45-addb0c2fc9ff}</Project>
       <Name>Gigya.Microdot.Ninject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gigya.Microdot.Orleans.Hosting\Gigya.Microdot.Orleans.Hosting.csproj">
-      <Project>{DD807780-01B0-4EF6-9E42-5D15CA26F353}</Project>
-      <Name>Gigya.Microdot.Orleans.Hosting</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Gigya.Microdot.Orleans.Ninject.Host\Gigya.Microdot.Orleans.Ninject.Host.csproj">
-      <Project>{AE847E21-F7D8-47FB-84C3-C7144A9B7A1D}</Project>
-      <Name>Gigya.Microdot.Orleans.Ninject.Host</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Choose>

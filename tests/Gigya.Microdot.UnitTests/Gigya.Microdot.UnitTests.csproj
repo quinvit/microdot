@@ -79,7 +79,6 @@
     <Compile Include="IDemoService.cs" />
     <Compile Include="MetricsDataEquatable.cs" />
     <Compile Include="MetricsDataExtenstion.cs" />
-    <Compile Include="Monitor\MetricsStatisticsPublisherTests.cs" />
     <Compile Include="Monitor\HealthMonitorTest.cs" />
     <Compile Include="Caching\Host\CachingProxyTests.cs" />
     <Compile Include="Caching\Host\ISlowService.cs" />
@@ -169,10 +168,6 @@
     <ProjectReference Include="..\..\Gigya.Microdot.Ninject\Gigya.Microdot.Ninject.csproj">
       <Project>{63E40F38-DF99-4DF5-9B45-ADDB0C2FC9FF}</Project>
       <Name>Gigya.Microdot.Ninject</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Gigya.Microdot.Orleans.Hosting\Gigya.Microdot.Orleans.Hosting.csproj">
-      <Project>{dd807780-01b0-4ef6-9e42-5d15ca26f353}</Project>
-      <Name>Gigya.Microdot.Orleans.Hosting</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Gigya.Microdot.ServiceDiscovery\Gigya.Microdot.ServiceDiscovery.csproj">
       <Project>{37E6909E-51E2-4BBA-8EFC-DBDF086D860E}</Project>
